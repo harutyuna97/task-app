@@ -6,6 +6,7 @@ import { signOut } from '../../store/actions/authActions';
 class Signedin extends Component {
     render() { 
         const { profile } = this.props
+        console.log(profile)
         const styles={
             div: {
                 width: '400px',

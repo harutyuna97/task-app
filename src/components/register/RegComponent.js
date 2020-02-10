@@ -50,8 +50,8 @@ class SignUp extends Component {
           </div>
           <div className="input-field">
             <label htmlFor="role" id='role'>Role: </label>
-            <input name='role' type="radio" value='admin' id='adminRole' onChange={this.handleChange}/> -admin
-            <input name='role' type="radio" value='user' id='userRole' onChange={this.handleChange}/> -user
+            <input name='role' type="radio" value='admin' id='role' onChange={this.handleChange}/> -admin
+            <input name='role' type="radio" value='user' id='role' onChange={this.handleChange}/> -user
           </div>
           <div className="input-field">
             <button className="reg-btn">Sign Up</button>
