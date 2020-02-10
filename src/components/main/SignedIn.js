@@ -11,14 +11,14 @@ class Signedin extends Component {
             div: {
                 width: '400px',
                 margin: '0 auto'
-            }
+            },
         }
         return ( 
             <div style={styles.div}>
-                <h2>Profile information</h2>
+                <h2 className='userInfo'>Profile information</h2>
                 <p>Name: {profile.firstName}</p>
                 <p>Last Name: {profile.lastName}</p>
-                <button onClick={this.props.signOut}>Sign Out</button>
+                <button className='signOutBtn' onClick={this.props.signOut}><i className="fas fa-sign-out-alt"></i></button>
             </div>
          );
     }

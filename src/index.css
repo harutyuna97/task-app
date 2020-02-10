@@ -13,6 +13,27 @@ body {
   height: 100vh;
 }
 
+.fa-sign-out-alt {
+  font-size: 40px;
+  margin-right: 30px;
+}
+
+.fa-sign-out-alt:hover {
+  color: #000000;
+}
+
+.signOutBtn {
+  width: 80px;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+
+.userInfo {
+  font-family: 'Lemonada', cursive;
+}
+
 .logInfo {
   width: 700px;
   margin: 180px auto;
