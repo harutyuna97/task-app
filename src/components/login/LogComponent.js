@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { signIn } from '../../store/actions/authActions'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 class LogComponent extends Component {
     state = {
@@ -23,19 +23,18 @@ class LogComponent extends Component {
         return <Redirect to='/' />
       }
       return (
-        <div className="container">
+        <div className="logInfo">
           <form className="form2" onSubmit={this.handleSubmit}>
             <h5 className="title">Sign In</h5>
             <div className="input-field">
-              <label htmlFor="email">Email: </label>
-              <input type="email" id='email' onChange={this.handleChange} />
+              <input className='mailPassInput' placeholder='&nbsp; Email' type="email" id='email' onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <label htmlFor="password">Password: </label>
-              <input type="password" id='password' onChange={this.handleChange} />
+              <input className='mailPassInput' placeholder='&nbsp; Password' type="password" id='password' onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <button className="log-btn">Login</button>
+              <button className="log-btn">Login</button> <br/>
+              <Link className='regLink' to='/register'>Dont have an account? Create one here!</Link>
               <div className="center red-text">
                 { authError ? <p>{authError}</p> : null }
               </div>

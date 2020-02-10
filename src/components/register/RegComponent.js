@@ -33,20 +33,20 @@ class SignUp extends Component {
       return <Redirect to='/' />
     }
     return (
-      <div className="container">
+      <div className="logInfo">
         <form className="form1" onSubmit={this.handleSubmit}>
           <h3 className="title">Sign Up</h3>
           <div className="input-field">
-            <input placeholder='Email' value={this.state.email} type="email" id='email' onChange={this.handleChange} />
+            <input className='mailPassInput' placeholder='Email' value={this.state.email} type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input placeholder='Password' value={this.state.password} type="password" id='password' onChange={this.handleChange} />
+            <input className='mailPassInput' placeholder='Password' value={this.state.password} type="password" id='password' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input placeholder='First Name' value={this.state.firstName} type="text" id='firstName' onChange={this.handleChange} />
+            <input className='mailPassInput' placeholder='First Name' value={this.state.firstName} type="text" id='firstName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input placeholder='Last Name' value={this.state.lastName} type="text" id='lastName' onChange={this.handleChange} />
+            <input className='mailPassInput' placeholder='Last Name' value={this.state.lastName} type="text" id='lastName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <label htmlFor="role" id='role'>Role: </label>

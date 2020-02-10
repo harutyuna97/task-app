@@ -6,12 +6,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5683C;
+  background: url('https://i.pinimg.com/originals/41/21/27/4121273c8e8fc8170a4010c974ae0e1b.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }
 
-.container {
+.logInfo {
   width: 700px;
   margin: 180px auto;
 }
@@ -27,7 +29,7 @@ body {
 }
 .input-field {
   width: 300px;
-  margin: 20px 200px;
+  margin: 20px 150px;
 }
 .reg-btn, .log-btn {
   width: 100px;
@@ -40,7 +42,19 @@ body {
   margin-left: 80px;
 }
 
+.log-btn:hover, .reg-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
 .fas {
   color: #FDD200;
+}
+
+.mailPassInput {
+  width: 300px;
+  padding: 10px 0;
+  border: 2px solid #eeeeee;
+  border-radius: 8px;
 }
 
