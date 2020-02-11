@@ -12,8 +12,6 @@ const initState = {
       }
 
     case 'LOGIN_SUCCESS':
-      alert('Login Success')
-
       return {
         ...state,
         authError: null
@@ -34,7 +32,6 @@ const initState = {
         }
 
       case 'SIGNOUT_SUCCESS':
-        console.log('signout success');
         return state;
   
       default:

@@ -7,18 +7,15 @@ class Signedin extends Component {
     render() { 
         const { profile } = this.props
         console.log(profile)
-        const styles={
-            div: {
-                width: '400px',
-                margin: '0 auto'
-            },
-        }
+        
         return ( 
-            <div style={styles.div}>
-                <h2 className='userInfo'>Profile information</h2>
-                <p>Name: {profile.firstName}</p>
-                <p>Last Name: {profile.lastName}</p>
+            <div>
                 <button className='signOutBtn' onClick={this.props.signOut}><i className="fas fa-sign-out-alt"></i></button>
+                <div className='profileCard'>
+                    <h2 className='userInfo'>Profile information</h2>
+                    <p>Name: {profile.firstName}</p>
+                    <p>Last Name: {profile.lastName}</p>
+                </div>
             </div>
          );
     }

@@ -6,10 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5683C;
-  background: url('https://i.pinimg.com/originals/41/21/27/4121273c8e8fc8170a4010c974ae0e1b.jpg');
+  background: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
 }
 
@@ -23,6 +22,8 @@ body {
 }
 
 .signOutBtn {
+  margin-left: 800px;
+  margin-top: 30px;
   width: 80px;
   padding: 10px;
   background: none;
@@ -36,7 +37,7 @@ body {
 
 .logInfo {
   width: 700px;
-  margin: 180px auto;
+  margin: 100px auto;
 }
 .form1, .form2 {
   background-color: #ffffff;
@@ -77,5 +78,9 @@ body {
   padding: 10px 0;
   border: 2px solid #eeeeee;
   border-radius: 8px;
+}
+
+.profileCard {
+  margin: 100px 0px 0 0;
 }
 
