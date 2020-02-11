@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 class Main extends Component {
     render() { 
-        const { auth } = this.props
+        const { auth, profile } = this.props
         const page = auth.uid ? <SignedIn /> : <SignedOut />
         const styles = {
           logo: {
@@ -26,9 +26,11 @@ class Main extends Component {
               padding: '20px',
           },  
         }
+
+        const link = profile.role === 'admin' ? '/admin' : '/'
         return ( 
             <nav style={styles.nav}>
-              <Link style={styles.logo} to='/'><h2>Our Logo</h2></Link>
+              <Link style={styles.logo} to={link}><h2>Our Logo</h2></Link>
               { page }
             </nav>
          );
@@ -38,7 +40,8 @@ class Main extends Component {
 const mapStateToProps = (state) => {
     console.log(state);
     return{
-      auth: state.firebase.auth
+      auth: state.firebase.auth,
+      profile: state.firebase.profile
     }
   }
  
