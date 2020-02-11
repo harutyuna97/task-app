@@ -4,7 +4,8 @@ import { signOut } from '../../store/actions/authActions';
 import { Redirect } from 'react-router-dom'
 
 class Admin extends Component {
-    render() { 
+    render() {
+        console.log(this.props) 
         const { profile } = this.props
         if (profile.role !== 'admin') {
             return <Redirect to = '/' />
