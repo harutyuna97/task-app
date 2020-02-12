@@ -7,14 +7,16 @@ const initState = {
   }
   
   const quizReducer = (state = initState, action) => {
-    if (action.type === 'CREATE_QUIZ_SUCCESS') {
-        console.log(action.project)
-        return state
-    } else if (action.type === 'CREATE_QUIZ_ERROR') {
-        console.log(action.err)
-        return state
+    switch (action.type) {
+        case 'CREATE_QUIZ_SUCCESS':
+            console.log(action.quiz);
+            return state
+        case 'CREATE_QUIZ_ERROR':
+            console.log(action.err);
+            return state
+        default:
+            return state
     }
-    return state
   }
   
   export default quizReducer

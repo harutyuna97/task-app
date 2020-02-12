@@ -10,7 +10,7 @@ export const createQuiz = (quiz) => {
         authorId: authorId,
         createdAt: new Date()
       }).then(() => {
-        dispatch({ type: 'CREATE_QUIZ_SUCCESS' });
+        dispatch({ type: 'CREATE_QUIZ_SUCCESS', quiz });
         console.log(profile)
       }).catch(err => {
         dispatch({ type: 'CREATE_QUIZ_ERROR' }, err);

@@ -1,0 +1,19 @@
+.question {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.answerImg {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+}
+
+.answerDiv {
+    display: flex,
+}
+
+div {
+    width: 200px;
+}
