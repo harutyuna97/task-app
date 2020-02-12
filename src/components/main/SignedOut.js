@@ -30,7 +30,7 @@ class SignedOut extends Component {
                 marginTop: '20px',
             },
             text: {
-                margin: '10px 0 0 10px',
+                margin: '10px 0 0 0px',
                 height: '10px'
             },
         }
