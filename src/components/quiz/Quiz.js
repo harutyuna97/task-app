@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createQuiz } from '../../store/actions/quizActions';
+import '../quiz/quiz.css'
+import { Redirect } from 'react-router-dom'
 
 
 class Quiz extends Component {
@@ -28,7 +30,7 @@ class Quiz extends Component {
     addQuestion = (e) => {
         e.preventDefault();
         this.props.createQuiz(this.state);
-        this.props.history.push('/');
+        this.props.history.push('/dashboard');
     }
 
     questHandler = (e) => {
@@ -42,7 +44,7 @@ class Quiz extends Component {
         answers[0] = {
             ...this.state.answers[0],
             [e.target.id]: e.target.value,
-            correct: e.target.checked ? true : false
+            correct: e.target.checked ? !this.state.answers[0].correct : false
         }
 
         this.setState({ answers })
@@ -52,7 +54,7 @@ class Quiz extends Component {
         answers[1] = {
             ...this.state.answers[1],
             [e.target.id]: e.target.value,
-            correct: e.target.checked ? true : false
+            correct: e.target.checked ? !this.state.answers[1].correct : false
         }
         this.setState({ answers })
     }
@@ -61,7 +63,7 @@ class Quiz extends Component {
         answers[2] = {
             ...this.state.answers[2],
             [e.target.id]: e.target.value,
-            correct: e.target.checked ? true : false
+            correct: e.target.checked ? !this.state.answers[2].correct : false
         }
         this.setState({ answers })
     }
@@ -70,26 +72,31 @@ class Quiz extends Component {
     
 
     render() { 
+        console.log(this.props)
+        const { profile } = this.props
+        if (profile.role !== 'admin') {
+            return <Redirect to = '/' />
+        }
         return ( 
             <div>
-                <form onSubmit={this.addQuestion}>
-                    <input onChange={this.questHandler} placeholder='Question'/>
+                <form className='quizForm' onSubmit={this.addQuestion}>
+                    <input className='questionInput' onChange={this.questHandler} placeholder='Question'/>
                     <div>
-                        <input id='content' onChange={this.answerHandlerOne} placeholder='Answer'/>
+                        <input className='answerContent' id='content' onChange={this.answerHandlerOne} placeholder='Answer'/>
                         <input id='correct' onChange={this.answerHandlerOne} type='checkbox' name='answer'/>
-                        <input id='image' onChange={this.answerHandlerOne} placeholder='URL of image'/>
+                        <input className='answerImage' id='image' onChange={this.answerHandlerOne} placeholder='URL of image'/>
                     </div>
                     <div>
-                        <input id='content' onChange={this.answerHandlerTwo} placeholder='Answer'/>
+                        <input className='answerContent' id='content' onChange={this.answerHandlerTwo} placeholder='Answer'/>
                         <input id='correct' onChange={this.answerHandlerTwo} type='checkbox' name='answer'/>
-                        <input id='image' onChange={this.answerHandlerTwo} placeholder='URL of image'/>
+                        <input className='answerImage' id='image' onChange={this.answerHandlerTwo} placeholder='URL of image'/>
                     </div>
                     <div>
-                        <input id='content' onChange={this.answerHandlerThree} placeholder='Answer'/>
+                        <input className='answerContent' id='content' onChange={this.answerHandlerThree} placeholder='Answer'/>
                         <input id='correct' onChange={this.answerHandlerThree} type='checkbox' name='answer'/>
-                        <input id='image' onChange={this.answerHandlerThree} placeholder='URL of image'/>
+                        <input className='answerImage' id='image' onChange={this.answerHandlerThree} placeholder='URL of image'/>
                     </div>
-                    <button>Add Question</button>
+                    <button className='addQuestionBtn'>Add Question</button>
                 </form>
             </div>
          );
@@ -98,7 +105,8 @@ class Quiz extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      auth: state.firebase.auth
+      auth: state.firebase.auth,
+      profile: state.firebase.profile
     }
   }
   

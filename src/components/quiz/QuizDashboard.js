@@ -3,10 +3,14 @@ import QuizList from './QuizList'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
 
 class QuizDashboard extends Component {
     render() { 
-        const { quizes } = this.props
+        const { quizes,profile } = this.props
+        if (!profile.firstName) {
+            return <Redirect to='/login'/>
+        }
         return ( 
             <div>
                 <QuizList quizes={quizes}/>
@@ -16,9 +20,9 @@ class QuizDashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.firestore.ordered.Quizs)
     return {
-        quizes: state.firestore.ordered.Quizs
+        quizes: state.firestore.ordered.Quizs,
+        profile: state.firebase.profile
     }
 }
  

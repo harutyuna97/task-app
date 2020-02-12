@@ -2,6 +2,8 @@
     width: 100%;
     max-width: 400px;
     text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .answerImg {
@@ -11,9 +13,73 @@
 }
 
 .answerDiv {
-    display: flex,
+    display: flex;
+    margin-top: 80px;
+    text-align: center;
 }
 
-div {
+.listDiv {
+    width: 100%;
+    max-width: 200px;
+    height: 400px;
+    margin-left: 230px;
+}
+
+
+.quizForm {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quizForm div {
+    margin-top: 50px;
+}
+
+.questionInput {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+}
+
+.answerContent {
     width: 200px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.answerImage {
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.addQuestionBtn {
+    margin-top: 20px;
+    padding: 20px;
+    background: none;
+    border: none;
+    background-color: #FF9E19;
+    border-radius: 8px;
+}
+
+.addQuestionBtn:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.trueAnswer {
+    border: 8px solid green;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+}
+
+.falseAnswer {
+    border: 8px solid red;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
 }

@@ -9,6 +9,7 @@ body {
   background: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -22,7 +23,7 @@ body {
 }
 
 .signOutBtn {
-  margin-left: 800px;
+  /* margin-left: 800px; */
   margin-top: 30px;
   width: 80px;
   padding: 10px;
@@ -32,14 +33,22 @@ body {
 
 .signOutBtnAdmin {
   width: 80px;
+  margin-top: 40px;
   padding: 10px;
   background: none;
   border: none;
 }
 
+.userDiv {
+  width: 200px;
+  margin-left: 400px;
+  margin-top: 30px;
+}
 
-.userInfo {
+.profName {
   font-family: 'Lemonada', cursive;
+  width: 100px;
+  font-size: 30px;
 }
 
 .logInfo {
@@ -96,3 +105,10 @@ body {
   margin: 70px 0 0 400px;
 }
 
+.addQuiz {
+  font-size: 20px;
+  text-decoration: none;
+  color: #AB0132;
+  background-color: #FDD200;
+  padding: 10px;
+}

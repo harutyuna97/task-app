@@ -14,8 +14,8 @@ class Admin extends Component {
                 <div className='profileCardAdmin'>
                     <h2 className='userInfo'>Profile information(Admin)</h2>
                     <p>Name: {profile.firstName}</p>
-                    <p>Last Name: {profile.lastName}</p>
-                    <Link to='/admin/quiz'>Add Quiz</Link> <br />
+                    <p>Last Name: {profile.lastName}</p> <br/>
+                    <Link className='addQuiz' to='/admin/quiz'>Add Quiz</Link> <br/>
                     <button className='signOutBtnAdmin' onClick={this.props.signOut}><i className="fas fa-sign-out-alt"></i></button>
                 </div>
             </div>
@@ -29,7 +29,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         profile: state.firebase.profile
     }

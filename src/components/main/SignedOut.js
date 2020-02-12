@@ -7,9 +7,9 @@ class SignedOut extends Component {
             nav: {
                 display: 'flex',
                 width: '100%',
-                maxWidth: '1200px',
-                margin: '0 auto', 
-                padding: '20px',
+                maxWidth: '200px',
+                margin: '20px 0px 0 500px',
+                textAlign: 'center'
             },
             login: {
                 height: '50px',
@@ -26,7 +26,7 @@ class SignedOut extends Component {
                 fontSize: '17px',
                 color: '#FDD200',
                 backgroundColor: '#7CC300',
-                marginLeft: '800px',
+                
                 marginTop: '20px',
             },
             text: {

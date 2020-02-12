@@ -5,7 +5,7 @@ import './quiz.css'
 
 const AnswersSummary = ({answers}) => {
     return (
-        <div>
+        <div className='answerDiv'>
             {answers.map(answer => {
                 return <AnswerList key={uuid()} answer={answer}/>
             })}
