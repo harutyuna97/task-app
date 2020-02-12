@@ -40,13 +40,13 @@ class SignUp extends Component {
             <input className='mailPassInput' placeholder='Email' value={this.state.email} type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input className='mailPassInput' placeholder='Password' value={this.state.password} type="password" id='password' onChange={this.handleChange} />
+            <input required className='mailPassInput' placeholder='Password' value={this.state.password} type="password" id='password' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input className='mailPassInput' placeholder='First Name' value={this.state.firstName} type="text" id='firstName' onChange={this.handleChange} />
+            <input required className='mailPassInput' placeholder='First Name' value={this.state.firstName} type="text" id='firstName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <input className='mailPassInput' placeholder='Last Name' value={this.state.lastName} type="text" id='lastName' onChange={this.handleChange} />
+            <input required className='mailPassInput' placeholder='Last Name' value={this.state.lastName} type="text" id='lastName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <label htmlFor="role" id='role'>Role: </label>
@@ -56,7 +56,7 @@ class SignUp extends Component {
           <div className="input-field">
             <button className="reg-btn">Sign Up</button>
           </div>
-          <div className="center red-text">
+          <div style={{color: 'red',}}>
                 { authError ? <p>{authError}</p> : null }
               </div>
         </form>

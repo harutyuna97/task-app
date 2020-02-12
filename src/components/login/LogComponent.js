@@ -35,7 +35,7 @@ class LogComponent extends Component {
             <div className="input-field">
               <button className="log-btn">Login</button> <br/>
               <Link className='regLink' to='/register'>Dont have an account? Create one here!</Link>
-              <div className="center red-text">
+              <div style={{color: 'red'}}>
                 { authError ? <p>{authError}</p> : null }
               </div>
             </div>
