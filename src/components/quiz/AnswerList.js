@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './quiz.css'
 
-const AnswerList = ({answer}) => {
-    
-const[check,setCheck] = useState('answerImg')
-
-    let checkAnswer = () => {
-        if (answer.correct) {
-            setCheck('trueAnswer')
-        } else {
-            setCheck('falseAnswer')
-        }
-    }
+const AnswerList = (props) => {
+    const answer = props.answer
+    const checkAnswer = props.checkAnswer.bind(this, answer.correct)
     return ( 
         <div className='listDiv'>
-            <img onClick={checkAnswer} className={check} src={answer.image} alt='answerImage' />
+            <img onClick={checkAnswer} className='answerImg' src={answer.image} alt='answerImage' />
             <h3> {answer.content} </h3>
         </div>
      );
 }
+
+
  
 export default AnswerList;
