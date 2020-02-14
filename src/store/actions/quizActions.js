@@ -17,3 +17,14 @@ export const createQuiz = (quiz) => {
       });
     }
   };
+
+  export const handleDelete = id => {
+    return (dispatch, getState, {getFirestore}) => {
+      const firestore = getFirestore()
+      firestore.collection('Quizs').doc(id).delete().then(() => {
+        dispatch({type: 'DELETE_SUCCESS'})
+      }).catch((err) => {
+        dispatch({type: 'DELETE_ERROR', err})
+      })
+    }
+  }

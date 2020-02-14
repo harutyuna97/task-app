@@ -148,8 +148,10 @@ body {
   outline: none;
 }
 
-.forgotInput:active {
-  border: none;
+.forgotP {
+  color: red;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .forgotBtn {

@@ -83,3 +83,27 @@
     max-width: 200px;
     height: 200px;
 }
+
+.quizDelBtn {
+    width: 100%;
+    max-width: 150px;
+    border: none;
+    background: none;
+    padding: 20px;
+    color: #000000;
+    border-radius: 8px;
+    background-color: #FFCC01;
+    font-size: 20px;
+}
+
+.quizDelBtn:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.delDiv {
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}

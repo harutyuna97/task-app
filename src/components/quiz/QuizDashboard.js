@@ -6,11 +6,15 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 
 class QuizDashboard extends Component {
+
+    
+
     render() { 
         const { quizes,profile } = this.props
         if (!profile.firstName) {
             return <Redirect to='/login'/>
         }
+
         return ( 
             <div>
                 <QuizList quizes={quizes}/>
