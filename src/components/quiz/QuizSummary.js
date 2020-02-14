@@ -19,7 +19,7 @@ const QuizSummary = ({quiz, checkAnswer, profile, handleDelete}) => {
 
     let del = null
 
-    if (profile.role === 'admin') {
+    if (quiz && profile.role === 'admin') {
         del = (
             <div className = 'delDiv'>
                 <button className='quizDelBtn' onClick={handleDelete.bind(this, quiz.id)}>Delete</button>

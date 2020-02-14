@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 
 class Signedin extends Component {
@@ -11,7 +11,7 @@ class Signedin extends Component {
         }
         return ( 
             <div className='userDiv'>
-                <span className='profName'>{profile.firstName}</span>
+                <Link to = '/user' className='profName'>{profile.firstName}</Link>
             </div>
          );
     }
