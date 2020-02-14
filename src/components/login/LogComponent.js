@@ -30,7 +30,8 @@ class LogComponent extends Component {
               <input className='mailPassInput' placeholder='&nbsp; Email' type="email" id='email' onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <input className='mailPassInput' placeholder='&nbsp; Password' type="password" id='password' onChange={this.handleChange} />
+              <input className='mailPassInput' placeholder='&nbsp; Password' type="password" id='password' onChange={this.handleChange} /> 
+              <Link className='forgotLink' to = '/forgotpassword'>Forgot password?</Link>  
             </div>
             <div className="input-field">
               <button className="log-btn">Login</button> <br/>

@@ -45,3 +45,15 @@ export const signOut = () => {
     });
   }
 }
+
+export const forgot = (email) => {
+  return (dispatch, getState, {getFirebase}) => {
+    const firebase = getFirebase();
+
+    firebase.auth().sendPasswordResetEmail(email).then(() => {
+      dispatch({ type: 'FORGOT_PASSWORD' })
+      }).catch((err) => {
+        dispatch({ type: 'FORGOT_ERROR', err });
+      });   
+  }
+}

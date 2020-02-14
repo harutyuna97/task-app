@@ -7,6 +7,7 @@ import Admin from './components/main/Admin';
 import Quiz from './components/quiz/Quiz';
 import QuizDashboard from './components/quiz/QuizDashboard';
 import User from './components/main/User';
+import ForgotPassword from './components/login/ForgotPassword';
 
 
 
@@ -20,6 +21,7 @@ class App extends Component {
         <div className='App'> 
         <Main />
           <Switch>
+            <Route exact path = '/forgotpassword' component = { ForgotPassword } />
             <Route exact path = '/user' component = { User } />
             <Route exact path = '/dashboard' component = { QuizDashboard } />
             <Route exact path = '/admin/quiz' component = { Quiz } />

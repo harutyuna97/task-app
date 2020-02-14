@@ -1,5 +1,6 @@
 const initState = {
-    authError: null
+    authError: null,
+    forgotError: null
   }
   
   const authReducer = (state = initState, action) => {
@@ -33,7 +34,15 @@ const initState = {
 
       case 'SIGNOUT_SUCCESS':
         return state;
-  
+        
+      case 'FORGOT_PASSWORD':
+        alert('Email sent')
+        return state
+      case 'FORGOT_ERROR':
+        return {
+          ...state,
+          forgotError: action.err.message
+        }
       default:
         return state
     }
